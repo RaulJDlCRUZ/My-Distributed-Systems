@@ -1,3 +1,7 @@
+#!/usr/bin/python3
+
+import socket
+
 class mysocket:
     """SOLO PARA DEMOSTRACION - codificado asi por claridad, no por eficiencia"""
 

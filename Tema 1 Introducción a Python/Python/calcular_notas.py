@@ -1,4 +1,3 @@
-
 def calc_grades(grades):
     _pass=0
     fail=0
