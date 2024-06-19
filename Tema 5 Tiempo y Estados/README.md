@@ -11,7 +11,7 @@ Un método de sincronización externa para los relojes de procesos $C_i$ (emplea
 </div>
 
 $$
-    T = T_S+\dfrac{\Delta T_c}{2} = T_S+\dfrac{T_{C2}-T_{C1}}{2}\\
+    T = T_S+\dfrac{\Delta T_c}{2} = T_S+\dfrac{T_{C2}-T_{C1}}{2};\ \ 
     \varepsilon=\pm\dfrac{\Delta T_c}{2}
 $$
 
