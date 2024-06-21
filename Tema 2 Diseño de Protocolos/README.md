@@ -204,4 +204,4 @@ Instawhat es una red social en la que un usuario puede publicar una fotografía 
 
 Diseña un protocolo binario que permita la funcionalidad indicada. Después, impleméntalo con ProtocolBuffers.
 
-_Work In Progress_
+_[Solución](./Ejercicios%20de%20protocolos/Instawhat-Paula/) propuesta por [Paula Castillejo](https://github.com/PAULACASTILLEJOBRAVO)_

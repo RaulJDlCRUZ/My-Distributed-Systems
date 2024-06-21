@@ -81,3 +81,5 @@ print('Sending result...')
 
 sock.close()
 ```
+
+> También se proporciona una posible implementación del servidor que probablemente se usó durante la sesión evaluable
