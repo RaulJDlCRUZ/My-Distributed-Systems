@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+message Person {
+    string name = 1;
+    int32 dni = 2;
+    repeated string email = 3;  // john.doe, alu, uclm, es
+}
+
+message Result {
+    enum Value {
+       UNKNOWN = 0;
+       OK = 1;
+       ERROR = 2;
+    }
+
+    Value value = 1;
+}

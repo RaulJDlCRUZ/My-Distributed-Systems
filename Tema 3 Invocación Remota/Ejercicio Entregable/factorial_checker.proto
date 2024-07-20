@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package factorial_checker;
+
+service FactorialChecker {
+  rpc RequestRandomNumber(NumberRequest) returns (NumberResponse) {}
+  rpc CheckFactorial(CheckRequest) returns (CheckResponse) {}
+}
+
+message NumberRequest {
+  string email = 1;
+}
+
+message NumberResponse {
+  int32 number = 1;
+}
+
+message CheckRequest {
+  string email = 1;
+  int64 factorial = 2;
+}
+
+message CheckResponse {
+  string result = 1;
+}

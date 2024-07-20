@@ -1,0 +1,44 @@
+syntax = "proto3";
+
+// Mensaje del control remoto para la puerta (cliente)
+message RemoteControl {
+
+    enum Command {
+        OPEN = 0;
+        CLOSE = 1;
+        CHECK_STATUS = 2;
+    }
+
+    enum OpenMode {
+        VEHICLE = 0;
+        WALKER = 1;
+    }
+
+    int32 id = 1;
+    Command cmnd = 2;
+    // Sólo se usarán con el comando ABRIR. Lo cotrolamos con la línea de argumentos
+    OpenMode mode = 3;
+    int32 time = 4;
+}
+
+// Mensaje para el sensor receptor en la puerta (servidor)
+message DoorSensor{
+    
+    enum Response {
+        ACK = 0;
+        CHECK_STATUS = 1;
+        ERROR = 2;
+    }
+
+    enum State {
+        ALREADY_OPEN = 0;
+        ALREADY_CLOSE = 1;
+        OBSTACLE_ERR = 2;
+        MOTOR_ERROR = 3;
+    }
+
+    int32 id = 1;
+    Response response = 2;
+    State state = 3;
+
+}

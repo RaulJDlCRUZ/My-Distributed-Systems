@@ -1,0 +1,24 @@
+Arranque del servicio IceStorm
+------------------------------
+
+IceStorm es un servicio que se ejecuta mediante icebox (el serivdor de aplicaciones de
+Ice). Icebox se ejecuta con su propio fichero de configuración. La persistencia de canales
+de icebox requiere un directorio para la base de datos.
+
+```console
+$ mkdir db
+$ icebox --Ice.Config=icebox.config &
+```
+
+Después ejecutamos al menos un subscriptor si queremos ver los eventos que llegan al
+canal:
+
+```console
+$ python3 subscriber.py --Ice.Config=subscriber.config
+```
+
+Y por último un publicador:
+
+```console
+$ python3 publisher.py --Ice.Config=publisher.config
+```
