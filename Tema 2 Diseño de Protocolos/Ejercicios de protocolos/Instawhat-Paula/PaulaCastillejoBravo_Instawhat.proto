@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+message Release {
+    int32 id = 1;
+
+    enum UserOptions {
+        POST  = 0;
+        DELETE = 1;
+        COMMENTS = 2; 
+        RATE = 3; 
+        LIKE = 4;
+        SHOW = 5;
+    }
+
+    UserOptions option = 2;
+    string url = 3; //Photo URL
+    int32 points = 4; //only for RATE
+    string remark = 5; //only for COMMENTS
+}
+
+message Response {
+    int32 id = 1;
+
+    enum Actions {
+        OK = 0;
+        ERROR = 1;
+    }
+
+    Actions result = 2;
+}
